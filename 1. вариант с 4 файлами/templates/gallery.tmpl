@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .gallery {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 5% 10%;
+        }
+        .gallery a {
+            margin-bottom: 20px;
+            /* width: 30%; */
+        }
+        .gallery a img {
+            /* width: 100%; */
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+
+        {% for image in data %}
+            <a href="image.php?image={{ image.src }}" target="blank"><img src="small/{{ image.src }}"></a>
+        {% endfor %}
+    
+    </div>
+</body>
+</html>
