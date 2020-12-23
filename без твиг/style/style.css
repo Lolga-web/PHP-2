@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+.nav_item {
+  width: 200px;
+  height: 35px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+.nav_item:hover {
+  opacity: 70%;
+}
+.catalog {
+  padding: 10px 0;
+}
+.catalog_pagination_list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.catalog_pagination_link {
+  padding: 5px;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  height: 40px;
+  line-height: 40px;
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.catalog_pagination_link:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.catalog_pagination_active {
+  background: rgba(0, 0, 0, 0.1);
+  color: black;
+}
+.catalog_pagination_prev {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  min-width: 40px;
+  line-height: 40px;
+  padding: 5px;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.catalog_pagination_prev:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.catalog_pagination_next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  min-width: 40px;
+  line-height: 40px;
+  padding: 5px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.catalog_pagination_next:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.catalog_list {
+  padding-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.catalog_list:after {
+  width: 230px;
+  content: '';
+}
+.catalog_item_link {
+  margin-top: 10px;
+}
+.catalog_item_wrp {
+  width: 230px;
+  height: 300px;
+  padding: 10px;
+  border: #000000 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.catalog_item_img {
+  max-width: 180px;
+  max-height: 230px;
+}
+.catalog_item_img_wrp {
+  width: 180px;
+  height: 230px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hide {
+  display: none;
+}
