@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Ювелирная мастерская</title>
+</head>
+<body>
+
+    <div class="container">
+
+            {% include 'nav.tmpl' %}
+
+            <div class="catalog">
+
+                {% include 'catalogPagination.tmpl' %}
+
+                <div class="catalog_list">
+
+                    {% if pagesCount != 0 %}
+                        {% for good in goods %}
+                       
+                            <a class="catalog_item_link" href="#">
+                                <div class="catalog_item_wrp" id="id_{{ good.id_good }}">
+                                    <div class="catalog_item_img_wrp">
+                                        <img class="catalog_item_img" src="img/catalog/{{ good.img }}">
+                                    </div>
+                                    <p class="catalog_item_articul">Артикул:&nbsp; {{ good.id_good }}</p>
+                                    <p class="catalog_item_articul">Цена:&nbsp; {{ good.price }} p.</p>
+                                </div> 
+                            </a>
+
+                        {% endfor %}
+                    {% else %}
+                        <p class="empty_catalog_message">В данной категории ничего не найдено</p>
+                    {% endif %}
+
+                </div>
+
+            {% include 'catalogPagination.tmpl' %}
+            
+        </div>
+
+    </div>    
+                                
+</body>
+</html>
