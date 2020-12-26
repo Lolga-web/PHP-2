@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'EB Garamond', serif;
+    color: #3d4b52;
+    font-size: 16px;
+    font-weight: normal;
+}
+a {
+    color: #3d4b52;
+    text-decoration: none;  
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#header {
+    padding: 30px 10px;
+}
+#header h1 {
+    font-size: 24px;
+}
+#menu {
+    padding: 30px 10px;
+    display: flex;
+}
+.menu_item {
+    width: 200px;
+    height: 35px;
+    padding: 5px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 4px;
+    list-style-type: none;
+}
+.menu_item:hover {
+    opacity: 70%;
+}
+#content {
+    padding: 0 10px;
+}
+#footer {
+    padding: 30px 10px;
+}
+
+.login_form,
+.reg_form {
+    width: 300px;
+    font-size: 20px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login_form_input,
+.reg_form_input {
+    width: 270px;
+    height: 30px;
+    font-size: 16px;
+    color: grey;
+    padding: 5px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+.login_form_input:focus,
+.reg_form_input:focus {
+    outline: 1px solid black;
+}
+.reg_form_text,
+.login_form_text {
+    align-self: flex-start;
+}
+.login_form_title,
+.reg_form_title {
+    font-size: 18px;
+}
+.reg_link {
+    text-decoration: underline;
+    color: black;
+    margin-top: 15px;
+    font-size: 18px;
+}
+.reg_link:hover {
+    text-decoration: none;
+}
+
+.btn {
+    border-radius: 4px;
+    display: inline-block;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    outline: 1px solid white;
+    outline-offset: -3px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+.btn:hover {
+    opacity: 70%;
+}
+
+.account p {
+    margin-bottom: 10px;
+}
