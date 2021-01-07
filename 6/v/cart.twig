@@ -1,0 +1,34 @@
+
+<div class="cart">
+    <div class="cart_list">
+
+        {% if goods %}
+            {% for good in goods %}
+
+                <div class="cart_item_wrp" id="id_{{ good.id }}">
+                    <img class="cart_item_img" src="assets/img/catalog/{{ good.img }}">
+                    <p class="cart_item_articul">Артикул:&nbsp; {{ good.id }}</p>
+                    <p class="cart_item_price">Цена:&nbsp; {{ good.price }} p.</p>
+                    <p class="cart_item_quantity">Количество:&nbsp; {{ good.quantity }}</p>
+                    <a class="cart_delete_link btn" href="index.php?class=cart&method=delete&id={{ good.id }}">Удалить</a>
+                </div> 
+                
+            {% endfor %}
+
+            <p>Итого: {{ cartCount }} товаров на сумму&nbsp; {{ cartSum }} р.</p>
+
+            {% if user == true %}
+                <a class="cart_order_link btn" href="#">Оформить заказ</a>
+            {% endif %}
+            {% if user == false %}
+                <p class="cart_login">Для заказа необходимо 
+                    <a class="cart_order_link" href="index.php?class=user&method=login" style="color:red;">авторизоваться</a> 
+                </p>
+            {% endif %}
+
+        {% else %}
+            <p class="empty_catalog_message">В корзине нет товаров</p>
+        {% endif %}
+
+    </div>
+</div>
