@@ -1,0 +1,37 @@
+<div class="accaunt_user">
+    <p class="welcome">Добро пожаловать,&nbsp; {{ user.name }}!</p>
+
+    <div class="orders_user">
+        <table class="order_user_table">
+            <tr class="order_user_table_title">
+                <th>№ заказа</th>
+                <th>Дата</th>
+                <th>Статус</th>
+            </tr>
+
+            {% if orders %}
+                {% for order in orders %}
+
+                    <tr class="order_user_table_text">
+                        <td>{{ order.id_order }}</td>
+                        <td>{{ order.date_order }}</td>
+                        <td>{{ order.status_order }}</td>
+                    </tr>
+                            
+                   <tr>
+                        <td class="order_user_table_good_list" colspan="3">
+                            {% for good in order_goods %}
+                                {% if good.id_order==order.id_order %}
+                                    <p>({{ good.id_good }}) {{ good.title }} - {{ good.price }} x {{ good.good_count }}шт</p>
+                                {% endif %}
+                            {% endfor %}
+                            <p class="order_sum">Сумма заказа:&nbsp; {{ order.sum }}&nbsp;р.</p>
+                        </td>
+                    </tr>    
+                    
+                {% endfor %}
+            {% endif %}
+        </table>
+    </div>
+</div>
+

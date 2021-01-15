@@ -1,0 +1,21 @@
+
+<div id="menu">
+    <a class="menu_link" href="index.php?class=page&method=index">На главную</a> 
+    <a class="menu_link" href="index.php?class=page&method=catalog">Каталог</a>
+    {% if user == true %}
+        <a class="menu_link" href="index.php?class=user&method=getUser">Личный кабинет</a> 
+        <a class="menu_link" href="index.php?class=user&method=logout">Выйти &nbsp; {{user}}</a>
+    {% endif %}
+    {% if user == false %}
+        <a class="menu_link" href="index.php?class=user&method=login">Войти</a> 
+        <a class="menu_link" href="index.php?class=user&method=regUser">Регистрация</a> 
+    {% endif %}
+
+    <a class="menu_link" href="index.php?class=cart&method=cart">Корзина&nbsp; <p class="menu_cart_count">
+        {% if cartCount %}
+            {{ cartCount }}
+        {% else %}
+            0
+        {% endif %}
+    </p></a>
+</div>

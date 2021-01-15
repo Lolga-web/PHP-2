@@ -1,0 +1,16 @@
+
+<div class="good">
+
+        <div class="good_img_wrp">
+            <img class="good_img" src="assets/img/catalog/{{ good.img }}" alt="good_img">
+        </div>
+    
+        <div class="good_desc_wrp">
+            <h2 class="good_title">{{ good.title }}</h2>
+            <p class="good_article">Артикул:&nbsp; {{ good.id }}</p>
+            <p class="good_desc">{{ good.description }}</p>
+            <p class="good_price">Цена:&nbsp; {{ good.price }}</p>
+            <a class="good_buy_link btn" href="index.php?class=cart&method=add&id={{ good.id }}">Купить</a>
+        </div>
+   
+</div>

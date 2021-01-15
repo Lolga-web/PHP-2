@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type">	
+	<link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" /> 	
+</head>
+<body>
+	<div class="container">
+
+		{% include 'header.twig' %}
+
+		{% include 'menu.twig' %}
+			
+		<div id="content">
+			{{content | raw}} 
+			<div>{{text | raw}}</div>
+		</div>
+				
+		{% include 'footer.twig' %}
+
+	</div>
+
+</body>
+</html>
