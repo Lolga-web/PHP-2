@@ -1,0 +1,27 @@
+
+<div class="catalog">
+
+    <div class="catalog_list">
+
+        {% if goods %}
+            {% for good in goods %}
+                           
+                <div class="catalog_item_wrp" id="id_{{ good.id }}">
+                    <a class="catalog_item_link" href="index.php?class=page&method=good&id={{ good.id }}">
+                        <img class="catalog_item_img" src="assets/img/catalog/{{ good.img }}">
+                        <p class="catalog_item_title">{{ good.title }}</p>
+                    </a>
+                    <div class="catalog_item_buy">
+                        <p class="catalog_item_price">Цена:&nbsp; {{ good.price }} p.</p>
+                        <a class="catalog_buy_link btn" href="index.php?class=cart&method=add&id={{ good.id }}">Купить</a>
+                    </div>
+                </div> 
+                
+            {% endfor %}
+        {% else %}
+            <p class="empty_catalog_message">В данной категории ничего не найдено</p>
+        {% endif %}
+
+    </div>
+
+</div>
